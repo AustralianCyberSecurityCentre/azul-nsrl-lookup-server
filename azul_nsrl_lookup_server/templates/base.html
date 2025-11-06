@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>NSRL Lookup</title>
+	<link href="{{ url_for('static', path='/css/bootstrap.min.css') }}" rel="stylesheet" />
+	<link href="{{ url_for('static', path='/css/extra.css') }}" rel="stylesheet" />
+</head>
+
+<body class="d-flex h-100 text-bg-dark">
+	<div class="cover-container d-felx w-100 h-100 p-3 mx-auto flex-column">
+		<header mb-auto>
+			<div>
+				<h3 class="float-md-start mb-0">NSRL Lookup</h3>
+				<nav class="nav nav-masthead justify-content-center float-md-end">
+					<a class="nav-link fw-bold py-1 px-0 active" aria-current="page"
+						href="{{ url_for('root') }}">Search</a>
+					<a class="nav-link fw-bold py-1 px-0" href="{{ url_for('custom_swagger_ui_html') }}">API</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+		<footer class="d-flex mt-auto text-muted justify-content-end">
+			<p>Tech for Azul... &#128125;</p>
+		</footer>
+	</div>
+	<script src="{{ url_for('static', path='/js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

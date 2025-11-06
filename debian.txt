@@ -1,0 +1,3 @@
+curl
+sqlite3
+unzip

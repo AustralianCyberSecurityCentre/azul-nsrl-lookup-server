@@ -1,0 +1,4 @@
+bandit
+httpx
+pytest
+tox

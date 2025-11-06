@@ -1,0 +1,130 @@
+# Kubernetes yaml to deploy a nginx directory browsing server that will automatically download the nsrl database and host them.
+# This can then be used as the target URL for azul-nsrl-lookup-server to receive its nsrl database updates.
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: fake-nist-data
+    component: nsrl
+    use-anything: "true"
+  name: nsrl-dummy-nist
+spec:
+  initContainers:
+  # Container with curl to download all of the zips from the nist aws source.
+  - image: alpine/curl
+    command:
+      - "/bin/sh"
+      - "-c"
+    # Download the latest modern minimal full and delta nsrl databases.
+    args:
+    - |
+      mkdir -p /data/rds_2024.09.1
+      cd /data/rds_2024.09.1
+      if [ -e "RDS_2024.09.1_modern_minimal_delta.zip" ]; then
+          echo 'RDS_2024.09.1_modern_minimal_delta.zip already exists' >&2
+      else
+          curl -O https://s3.amazonaws.com/rds.nsrl.nist.gov/RDS/rds_2024.09.1/RDS_2024.09.1_modern_minimal_delta.zip
+      fi
+      mkdir -p /data/rds_2024.03.1
+      cd /data/rds_2024.03.1
+      if [ -e "RDS_2024.03.1_modern_minimal.zip" ]; then
+          echo 'RDS_2024.03.1_modern_minimal.zip already exists' >&2
+      else
+          curl -O https://s3.amazonaws.com/rds.nsrl.nist.gov/RDS/rds_2024.03.1/RDS_2024.03.1_modern_minimal.zip
+      fi
+      echo 'done'
+    name: download-zips
+    resources:
+      limits:
+        cpu: "1"
+        memory: 2Gi
+      requests:
+        cpu: 100m
+        memory: 150Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        add:
+        - NET_BIND_SERVICE
+        drop:
+        - ALL
+    volumeMounts:
+    - mountPath: /data
+      name: data
+  volumes:
+  - name: data
+    persistentVolumeClaim:
+      claimName: fake-nist-data
+  # Nginx - autoindex server to host the files so they can be downloaded.
+  # URL will be something like: DOWNLOAD_URL: http://fake-nist-data.azul-dev.svc.cluster.local:80
+  containers:
+  - image: dceoy/nginx-autoindex
+    name: main
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 2500m
+        memory: 4Gi
+      requests:
+        cpu: 500m
+        memory: 500Mi
+    volumeMounts:
+    - mountPath: /var/lib/nginx/html
+      name: data
+---
+# PVC that holds all the zips
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fake-nist-data
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Gi
+  storageClassName: managed-csi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fake-nist-data
+spec:
+  ports:
+  - name: http-web
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: fake-nist-data
+---
+# Basic ingress so you can review the server.
+# easiest way to download the files (as a test)
+# URL will be https://fake-nist-dev.internal/rds_2024.03.1/RDS_2024.03.1_modern_minimal.zip
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nist-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: vault-clusterissuer-azr
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: fake-nist-dev.internal
+    http:
+      paths:
+      - backend:
+          service:
+            name: fake-nist-data
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - fake-nist-dev.internal
+    secretName: fake-nist-tls
