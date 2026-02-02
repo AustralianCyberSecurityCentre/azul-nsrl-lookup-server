@@ -71,7 +71,7 @@ def _lookup(
         else:
             entity = crud.get_details(db, digest=digest)
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e)) from e
     if not entity:
         raise HTTPException(status_code=404, detail="File not in dataset.")
     return entity
