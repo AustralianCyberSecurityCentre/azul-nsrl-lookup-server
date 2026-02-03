@@ -1,4 +1,0 @@
-bandit
-httpx
-pytest
-tox

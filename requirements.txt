@@ -1,9 +1,0 @@
-fastapi
-jinja2
-pydantic>2
-pydantic-settings
-python-multipart
-sqlalchemy<2.0
-typer[all]
-uvicorn
-setuptools
