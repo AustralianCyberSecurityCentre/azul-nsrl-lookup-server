@@ -1,5 +1,8 @@
 """NSRL Lookup Server."""
 
-from pkg_resources import get_distribution
+from importlib.metadata import PackageNotFoundError, version
 
-__version__ = get_distribution(__name__).version
+try:
+    __version__ = version(__name__)
+except PackageNotFoundError:
+    __version__ = "1.0.0"

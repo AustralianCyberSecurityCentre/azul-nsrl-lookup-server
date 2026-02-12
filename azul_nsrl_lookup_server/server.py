@@ -3,7 +3,8 @@
 The lookup server.
 """
 
-import pkg_resources
+from importlib.resources import files
+
 from fastapi import Depends, FastAPI, Form, HTTPException, Request
 from fastapi.openapi.docs import (
     get_swagger_ui_html,
@@ -24,8 +25,11 @@ app = FastAPI(
     root_path=settings.server.root_path.rstrip("/"),
     redoc_url=None,
 )
-app.mount("/static", StaticFiles(directory=pkg_resources.resource_filename(__name__, "static/")), name="static")
-templates = Jinja2Templates(directory=pkg_resources.resource_filename(__name__, "templates/"))
+static_path = files(__package__).joinpath("static")
+app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
+
+templates_path = files(__package__).joinpath("templates")
+templates = Jinja2Templates(directory=str(templates_path))
 
 # don't try to load on import so we can effectively relfectively load
 global SessionLocal
