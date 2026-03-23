@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 [[package]]
 name = "annotated-doc"
 version = "0.0.4"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/fbc/da96e87e9c92a/annotated_doc-0.0.4.tar.gz", hash = "sha256:fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/571/ac1dc6991c450/annotated_doc-0.0.4-py3-none-any.whl", hash = "sha256:571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320" },
@@ -14,7 +14,7 @@ wheels = [
 [[package]]
 name = "annotated-types"
 version = "0.7.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/aff/07c09a53a08bc/annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/1f0/2e8b43a8fbbc3/annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53" },
@@ -23,7 +23,7 @@ wheels = [
 [[package]]
 name = "anyio"
 version = "4.12.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "idna" },
     { name = "typing-extensions", marker = "python_full_version < '3.13'" },
@@ -78,7 +78,7 @@ dev = [
 [[package]]
 name = "cachetools"
 version = "7.0.5"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/0cd/042c24377200c/cachetools-7.0.5.tar.gz", hash = "sha256:0cd042c24377200c1dcd225f8b7b12b0ca53cc2c961b43757e774ebe190fd990" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/46b/c8ebefbe48540/cachetools-7.0.5-py3-none-any.whl", hash = "sha256:46bc8ebefbe485407621d0a4264b23c080cedd913921bad7ac3ed2f26c183114" },
@@ -87,7 +87,7 @@ wheels = [
 [[package]]
 name = "certifi"
 version = "2026.2.25"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/e88/7ab5cee78ea81/certifi-2026.2.25.tar.gz", hash = "sha256:e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/027/692e4402ad994/certifi-2026.2.25-py3-none-any.whl", hash = "sha256:027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa" },
@@ -96,7 +96,7 @@ wheels = [
 [[package]]
 name = "click"
 version = "8.3.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
@@ -108,7 +108,7 @@ wheels = [
 [[package]]
 name = "colorama"
 version = "0.4.6"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/086/95f5cb7ed6e05/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/4f1/d9991f5acc0ca/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6" },
@@ -117,7 +117,7 @@ wheels = [
 [[package]]
 name = "distlib"
 version = "0.4.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/fee/c40075be03a04/distlib-0.4.0.tar.gz", hash = "sha256:feec40075be03a04501a973d81f633735b4b69f98b05450592310c0f401a4e0d" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/965/9f7d87e46584a/distlib-0.4.0-py2.py3-none-any.whl", hash = "sha256:9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16" },
@@ -126,7 +126,7 @@ wheels = [
 [[package]]
 name = "fastapi"
 version = "0.135.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "annotated-doc" },
     { name = "pydantic" },
@@ -142,7 +142,7 @@ wheels = [
 [[package]]
 name = "filelock"
 version = "3.25.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/b64/ece2b38f4ca29/filelock-3.25.2.tar.gz", hash = "sha256:b64ece2b38f4ca29dd3e810287aa8c48182bbecd1ae6e9ae126c9b35f1382694" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/ca8/afb0da15f2297/filelock-3.25.2-py3-none-any.whl", hash = "sha256:ca8afb0da15f229774c9ad1b455ed96e85a81373065fb10446672f64444ddf70" },
@@ -151,7 +151,7 @@ wheels = [
 [[package]]
 name = "greenlet"
 version = "3.3.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/2ea/f067fc6d88693/greenlet-3.3.2.tar.gz", hash = "sha256:2eaf067fc6d886931c7962e8c6bede15d2f01965560f3359b27c80bde2d151f2" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/ac8/d61d4343b799d/greenlet-3.3.2-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:ac8d61d4343b799d1e526db579833d72f23759c71e07181c2d2944e429eb09cd" },
@@ -190,7 +190,7 @@ wheels = [
 [[package]]
 name = "h11"
 version = "0.16.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/4e3/5b956cf45792e/h11-0.16.0.tar.gz", hash = "sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/63c/f8bbe7522de3b/h11-0.16.0-py3-none-any.whl", hash = "sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86" },
@@ -199,7 +199,7 @@ wheels = [
 [[package]]
 name = "httpcore"
 version = "1.0.9"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "certifi" },
     { name = "h11" },
@@ -212,7 +212,7 @@ wheels = [
 [[package]]
 name = "httpx"
 version = "0.28.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "anyio" },
     { name = "certifi" },
@@ -227,7 +227,7 @@ wheels = [
 [[package]]
 name = "idna"
 version = "3.11"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/795/dafcc9c04ed0c/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/771/a87f49d9defaf/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea" },
@@ -236,7 +236,7 @@ wheels = [
 [[package]]
 name = "iniconfig"
 version = "2.3.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/c76/315c77db06865/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/f63/1c04d2c48c52b/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12" },
@@ -245,7 +245,7 @@ wheels = [
 [[package]]
 name = "jinja2"
 version = "3.1.6"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "markupsafe" },
 ]
@@ -257,7 +257,7 @@ wheels = [
 [[package]]
 name = "markdown-it-py"
 version = "4.0.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "mdurl" },
 ]
@@ -269,7 +269,7 @@ wheels = [
 [[package]]
 name = "markupsafe"
 version = "3.0.3"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/722/695808f4b6457/markupsafe-3.0.3.tar.gz", hash = "sha256:722695808f4b6457b320fdc131280796bdceb04ab50fe1795cd540799ebe1698" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/d53/197da72cc091b/markupsafe-3.0.3-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:d53197da72cc091b024dd97249dfc7794d6a56530370992a5e1a08983ad9230e" },
@@ -332,7 +332,7 @@ wheels = [
 [[package]]
 name = "mdurl"
 version = "0.1.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/bb4/13d29f5eea38f/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/840/08a41e51615a4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8" },
@@ -341,7 +341,7 @@ wheels = [
 [[package]]
 name = "packaging"
 version = "26.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/002/43ae351a25711/packaging-26.0.tar.gz", hash = "sha256:00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/b36/f1fef9334a558/packaging-26.0-py3-none-any.whl", hash = "sha256:b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529" },
@@ -350,7 +350,7 @@ wheels = [
 [[package]]
 name = "platformdirs"
 version = "4.9.4"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/1ec/356301b7dc906/platformdirs-4.9.4.tar.gz", hash = "sha256:1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/68a/9a4619a666ea6/platformdirs-4.9.4-py3-none-any.whl", hash = "sha256:68a9a4619a666ea6439f2ff250c12a853cd1cbd5158d258bd824a7df6be2f868" },
@@ -359,7 +359,7 @@ wheels = [
 [[package]]
 name = "pluggy"
 version = "1.6.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7dc/c130b76258d33/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/e92/0276dd6813095/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746" },
@@ -368,7 +368,7 @@ wheels = [
 [[package]]
 name = "pydantic"
 version = "2.12.5"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "annotated-types" },
     { name = "pydantic-core" },
@@ -383,7 +383,7 @@ wheels = [
 [[package]]
 name = "pydantic-core"
 version = "2.41.5"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "typing-extensions" },
 ]
@@ -454,7 +454,7 @@ wheels = [
 [[package]]
 name = "pydantic-settings"
 version = "2.13.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "pydantic" },
     { name = "python-dotenv" },
@@ -468,7 +468,7 @@ wheels = [
 [[package]]
 name = "pygments"
 version = "2.19.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/636/cb2477cec7f89/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/865/40386c03d588b/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b" },
@@ -477,7 +477,7 @@ wheels = [
 [[package]]
 name = "pyproject-api"
 version = "1.10.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "packaging" },
 ]
@@ -489,7 +489,7 @@ wheels = [
 [[package]]
 name = "pytest"
 version = "9.0.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "iniconfig" },
@@ -504,21 +504,21 @@ wheels = [
 
 [[package]]
 name = "python-discovery"
-version = "1.1.3"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+version = "1.2.0"
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "filelock" },
     { name = "platformdirs" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7ac/ca36e818cd88e/python_discovery-1.1.3.tar.gz", hash = "sha256:7acca36e818cd88e9b2ba03e045ad7e93e1713e29c6bbfba5d90202310b7baa5" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7d3/3e350704818b0/python_discovery-1.2.0.tar.gz", hash = "sha256:7d33e350704818b09e3da2bd419d37e21e7c30db6e0977bb438916e06b41b5b1" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/90e/795f0121bc845/python_discovery-1.1.3-py3-none-any.whl", hash = "sha256:90e795f0121bc84572e737c9aa9966311b9fde44ffb88a5953b3ec9b31c6945e" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/1e1/08f1bbe2ed0ef/python_discovery-1.2.0-py3-none-any.whl", hash = "sha256:1e108f1bbe2ed0ef089823d28805d5ad32be8e734b86a5f212bf89b71c266e4a" },
 ]
 
 [[package]]
 name = "python-dotenv"
 version = "1.2.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/2c3/71a91fbd7ba08/python_dotenv-1.2.2.tar.gz", hash = "sha256:2c371a91fbd7ba082c2c1dc1f8bf89ca22564a087c2c287cd9b662adde799cf3" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/1d8/214789a24de45/python_dotenv-1.2.2-py3-none-any.whl", hash = "sha256:1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a" },
@@ -527,7 +527,7 @@ wheels = [
 [[package]]
 name = "python-multipart"
 version = "0.0.22"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/734/0bef99a7e0032/python_multipart-0.0.22.tar.gz", hash = "sha256:7340bef99a7e0032613f56dc36027b959fd3b30a787ed62d310e951f7c3a3a58" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/2b2/cd894c83d21bf/python_multipart-0.0.22-py3-none-any.whl", hash = "sha256:2b2cd894c83d21bf49d702499531c7bafd057d730c201782048f7945d82de155" },
@@ -536,7 +536,7 @@ wheels = [
 [[package]]
 name = "rich"
 version = "14.3.3"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "markdown-it-py" },
     { name = "pygments" },
@@ -549,7 +549,7 @@ wheels = [
 [[package]]
 name = "setuptools"
 version = "82.0.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7d8/72682c5d01cfd/setuptools-82.0.1.tar.gz", hash = "sha256:7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/a59/e362652f08dcd/setuptools-82.0.1-py3-none-any.whl", hash = "sha256:a59e362652f08dcd477c78bb6e7bd9d80a7995bc73ce773050228a348ce2e5bb" },
@@ -558,7 +558,7 @@ wheels = [
 [[package]]
 name = "shellingham"
 version = "1.5.4"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/8db/ca0739d487e5b/shellingham-1.5.4.tar.gz", hash = "sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/7ec/fff8f2fd72616/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686" },
@@ -567,7 +567,7 @@ wheels = [
 [[package]]
 name = "sqlalchemy"
 version = "1.4.54"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "greenlet", marker = "platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64'" },
 ]
@@ -582,21 +582,21 @@ wheels = [
 
 [[package]]
 name = "starlette"
-version = "0.52.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+version = "1.0.0"
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "anyio" },
     { name = "typing-extensions", marker = "python_full_version < '3.13'" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/834/edd1b0a231676/starlette-0.52.1.tar.gz", hash = "sha256:834edd1b0a23167694292e94f597773bc3f89f362be6effee198165a35d62933" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/6a4/beaf1f81bb472/starlette-1.0.0.tar.gz", hash = "sha256:6a4beaf1f81bb472fd19ea9b918b50dc3a77a6f2e190a12954b25e6ed5eea149" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/002/9d43eb3d273bc/starlette-0.52.1-py3-none-any.whl", hash = "sha256:0029d43eb3d273bc4f83a08720b4912ea4b071087a3b48db01b7c839f7954d74" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/d3e/c55e0bb321692/starlette-1.0.0-py3-none-any.whl", hash = "sha256:d3ec55e0bb321692d275455ddfd3df75fff145d009685eb40dc91fc66b03d38b" },
 ]
 
 [[package]]
 name = "tomli-w"
 version = "1.2.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/2dd/14fac5a47c27b/tomli_w-1.2.0.tar.gz", hash = "sha256:2dd14fac5a47c27be9cd4c976af5a12d87fb1f0b4512f81d69cce3b35ae25021" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/188/306098d013b69/tomli_w-1.2.0-py3-none-any.whl", hash = "sha256:188306098d013b691fcadc011abd66727d3c414c571bb01b1a174ba8c983cf90" },
@@ -604,8 +604,8 @@ wheels = [
 
 [[package]]
 name = "tox"
-version = "4.50.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+version = "4.50.3"
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "cachetools" },
     { name = "colorama" },
@@ -617,15 +617,15 @@ dependencies = [
     { name = "tomli-w" },
     { name = "virtualenv" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/1d9/c1d678bb5c1a2/tox-4.50.0.tar.gz", hash = "sha256:1d9c1d678bb5c1a2d59c19ae58df7d033578ac1d91c5625aaa62aac792093401" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/c74/5641de6cc4f19/tox-4.50.3.tar.gz", hash = "sha256:c745641de6cc4f19d066bd9f98c1c25f7affb005b381b7f3694a1f142ea0946b" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/fb0/bf14043b8d9d6/tox-4.50.0-py3-none-any.whl", hash = "sha256:fb0bf14043b8d9d6cbe56b322b2860da50f6b898788ebfec621b84396dc948d6" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/5e7/88a512bfe6f74/tox-4.50.3-py3-none-any.whl", hash = "sha256:5e788a512bfe6f7447e0c8d7c1b666eb2e56e5e676c65717490423bec37d1a07" },
 ]
 
 [[package]]
 name = "typer"
 version = "0.24.1"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "annotated-doc" },
     { name = "click" },
@@ -640,7 +640,7 @@ wheels = [
 [[package]]
 name = "typing-extensions"
 version = "4.15.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/0ce/a48d173cc12fa/typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466" }
 wheels = [
     { url = "https://devpi.acsc.internal/root/pypi/+f/f0f/a19c6845758ab/typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548" },
@@ -649,7 +649,7 @@ wheels = [
 [[package]]
 name = "typing-inspection"
 version = "0.4.2"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "typing-extensions" },
 ]
@@ -661,7 +661,7 @@ wheels = [
 [[package]]
 name = "uvicorn"
 version = "0.42.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "click" },
     { name = "h11" },
@@ -674,7 +674,7 @@ wheels = [
 [[package]]
 name = "virtualenv"
 version = "21.2.0"
-source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
+source = { registry = "https://devpi.acsc.internal/azul/stable/+simple/" }
 dependencies = [
     { name = "distlib" },
     { name = "filelock" },
