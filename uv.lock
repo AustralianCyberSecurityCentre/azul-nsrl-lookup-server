@@ -125,7 +125,7 @@ wheels = [
 
 [[package]]
 name = "fastapi"
-version = "0.135.1"
+version = "0.135.2"
 source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
 dependencies = [
     { name = "annotated-doc" },
@@ -134,9 +134,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/d04/115b508d936d2/fastapi-0.135.1.tar.gz", hash = "sha256:d04115b508d936d254cea545b7312ecaa58a7b3a0f84952535b4c9afae7668cd" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/88a/8320953597555/fastapi-0.135.2.tar.gz", hash = "sha256:88a832095359755527b7f63bb4c6bc9edb8329a026189eed83d6c1afcf419d56" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/46e/2fc5745924b7c/fastapi-0.135.1-py3-none-any.whl", hash = "sha256:46e2fc5745924b7c840f71ddd277382af29ce1cdb7d5eab5bf697e3fb9999c9e" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/0af/0447d541867e8/fastapi-0.135.2-py3-none-any.whl", hash = "sha256:0af0447d541867e8db2a6a25c23a8c4bd80e2394ac5529bd87501bbb9e240ca5" },
 ]
 
 [[package]]
@@ -504,15 +504,15 @@ wheels = [
 
 [[package]]
 name = "python-discovery"
-version = "1.1.3"
+version = "1.2.0"
 source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
 dependencies = [
     { name = "filelock" },
     { name = "platformdirs" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7ac/ca36e818cd88e/python_discovery-1.1.3.tar.gz", hash = "sha256:7acca36e818cd88e9b2ba03e045ad7e93e1713e29c6bbfba5d90202310b7baa5" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/7d3/3e350704818b0/python_discovery-1.2.0.tar.gz", hash = "sha256:7d33e350704818b09e3da2bd419d37e21e7c30db6e0977bb438916e06b41b5b1" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/90e/795f0121bc845/python_discovery-1.1.3-py3-none-any.whl", hash = "sha256:90e795f0121bc84572e737c9aa9966311b9fde44ffb88a5953b3ec9b31c6945e" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/1e1/08f1bbe2ed0ef/python_discovery-1.2.0-py3-none-any.whl", hash = "sha256:1e108f1bbe2ed0ef089823d28805d5ad32be8e734b86a5f212bf89b71c266e4a" },
 ]
 
 [[package]]
@@ -612,15 +612,15 @@ wheels = [
 
 [[package]]
 name = "starlette"
-version = "0.52.1"
+version = "1.0.0"
 source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
 dependencies = [
     { name = "anyio" },
     { name = "typing-extensions", marker = "python_full_version < '3.13'" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/834/edd1b0a231676/starlette-0.52.1.tar.gz", hash = "sha256:834edd1b0a23167694292e94f597773bc3f89f362be6effee198165a35d62933" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/6a4/beaf1f81bb472/starlette-1.0.0.tar.gz", hash = "sha256:6a4beaf1f81bb472fd19ea9b918b50dc3a77a6f2e190a12954b25e6ed5eea149" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/002/9d43eb3d273bc/starlette-0.52.1-py3-none-any.whl", hash = "sha256:0029d43eb3d273bc4f83a08720b4912ea4b071087a3b48db01b7c839f7954d74" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/d3e/c55e0bb321692/starlette-1.0.0-py3-none-any.whl", hash = "sha256:d3ec55e0bb321692d275455ddfd3df75fff145d009685eb40dc91fc66b03d38b" },
 ]
 
 [[package]]
@@ -634,7 +634,7 @@ wheels = [
 
 [[package]]
 name = "tox"
-version = "4.50.0"
+version = "4.50.3"
 source = { registry = "https://devpi.acsc.internal/azul/stable/+simple" }
 dependencies = [
     { name = "cachetools" },
@@ -647,9 +647,9 @@ dependencies = [
     { name = "tomli-w" },
     { name = "virtualenv" },
 ]
-sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/1d9/c1d678bb5c1a2/tox-4.50.0.tar.gz", hash = "sha256:1d9c1d678bb5c1a2d59c19ae58df7d033578ac1d91c5625aaa62aac792093401" }
+sdist = { url = "https://devpi.acsc.internal/root/pypi/+f/c74/5641de6cc4f19/tox-4.50.3.tar.gz", hash = "sha256:c745641de6cc4f19d066bd9f98c1c25f7affb005b381b7f3694a1f142ea0946b" }
 wheels = [
-    { url = "https://devpi.acsc.internal/root/pypi/+f/fb0/bf14043b8d9d6/tox-4.50.0-py3-none-any.whl", hash = "sha256:fb0bf14043b8d9d6cbe56b322b2860da50f6b898788ebfec621b84396dc948d6" },
+    { url = "https://devpi.acsc.internal/root/pypi/+f/5e7/88a512bfe6f74/tox-4.50.3-py3-none-any.whl", hash = "sha256:5e788a512bfe6f7447e0c8d7c1b666eb2e56e5e676c65717490423bec37d1a07" },
 ]
 
 [[package]]
