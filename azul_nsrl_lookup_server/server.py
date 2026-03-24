@@ -3,6 +3,7 @@
 The lookup server.
 """
 
+from contextlib import asynccontextmanager
 from importlib.resources import files
 
 from fastapi import Depends, FastAPI, Form, HTTPException, Request
@@ -18,32 +19,37 @@ from sqlalchemy.orm import Session
 from . import __version__, crud, models, schema, settings
 from .database import setup_engine
 
-# app setup
+# don't try to load on import so we can effectively relfectively load
+global SessionLocal
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Function to run at startup of the fastapi server to create the database."""
+    global SessionLocal
+    engine, SessionLocal = setup_engine()
+
+    # reflect tables lazily on startup
+    models.Reflected.prepare(engine)
+
+    yield
+
+    # shutdown logic
+    engine.dispose()
+
+
 app = FastAPI(
     title="NSRL Lookup",
     version=str(__version__),
     root_path=settings.server.root_path.rstrip("/"),
     redoc_url=None,
+    lifespan=lifespan,
 )
 static_path = files(__package__).joinpath("static")
 app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
 
 templates_path = files(__package__).joinpath("templates")
 templates = Jinja2Templates(directory=str(templates_path))
-
-# don't try to load on import so we can effectively relfectively load
-global SessionLocal
-
-
-@app.on_event("startup")
-def db_setup():
-    """Initialise the database.
-
-    This should be lazy loaded on startup to enable the correct reflective loading of the existing database.
-    """
-    global SessionLocal
-    engine, SessionLocal = setup_engine()
-    models.Reflected.prepare(engine=engine)
 
 
 # Dependency

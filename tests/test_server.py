@@ -62,7 +62,7 @@ class TestServer(unittest.TestCase):
         engine = create_engine(db_url, connect_args={"check_same_thread": False})
         TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-        Reflected.prepare(engine=engine)
+        Reflected.prepare(engine, views=True)
 
         def override_get_db():
             try:
