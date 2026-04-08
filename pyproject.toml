@@ -78,7 +78,9 @@ version = "0.0.0"
 dev = [
     "httpx>=0.28.1",
     "pytest>=9.0.2",
+    "ruff>=0.15.8",
     "tox>=4.34.1",
+    "ty>=0.0.27",
 ]
 
 [tool.ruff]
