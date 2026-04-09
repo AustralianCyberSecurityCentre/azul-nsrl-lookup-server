@@ -30,7 +30,10 @@ async def lifespan(app: FastAPI):
     engine, SessionLocal = setup_engine()
 
     # reflect tables lazily on startup
-    models.Reflected.prepare(engine)
+    models.Reflected.prepare(
+        bind=engine,
+        views=True,
+    )
 
     yield
 
