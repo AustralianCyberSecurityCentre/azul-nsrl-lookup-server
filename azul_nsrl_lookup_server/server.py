@@ -109,14 +109,17 @@ def results(request: Request, digest: str = Form(), detailed: bool = Form(False)
         result = _lookup(digest=digest, db=db, details=detailed)
     except HTTPException as err:
         return templates.TemplateResponse(
-            "index.html", {"request": request, "results": [], "detailed": False, "pkg_stats": None, "err": err}
+            name="index.html",
+            request=request,
+            context={"results": [], "detailed": False, "pkg_stats": None, "err": err},
         )
 
     # exists query
     if not detailed:
         return templates.TemplateResponse(
-            "index.html",
-            {"request": request, "results": [result], "detailed": False, "pkg_stats": None, "err": None},
+            name="index.html",
+            request=request,
+            context={"results": [result], "detailed": False, "pkg_stats": None, "err": None},
         )
 
     # get details
@@ -162,16 +165,19 @@ def results(request: Request, digest: str = Form(), detailed: bool = Form(False)
     }
 
     return templates.TemplateResponse(
-        "index.html",
-        {"request": request, "results": results, "detailed": detailed, "pkg_stats": pkg_stats, "err": None},
+        name="index.html",
+        request=request,
+        context={"results": results, "detailed": detailed, "pkg_stats": pkg_stats, "err": None},
     )
 
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
-def root(request: Request) -> dict:
+def root(request: Request):
     """Main landing page."""
     return templates.TemplateResponse(
-        "index.html", {"request": request, "results": [], "detailed": None, "pkg_stats": None, "err": None}
+        name="index.html",
+        request=request,
+        context={"results": [], "detailed": None, "pkg_stats": None, "err": None},
     )
 
 

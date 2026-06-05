@@ -82,6 +82,16 @@ class TestServer(unittest.TestCase):
         except:
             pass
 
+    def test_get_index(self):
+        """Invalid digest given."""
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200, response.text)
+
+    def test_post_based_search(self):
+        """Invalid digest given."""
+        response = self.client.post("/", data={"digest": self.valid_sha256, "detailed": False})
+        self.assertEqual(response.status_code, 200, response.text)
+
     def test_valid_distinct(self):
         """Validate DISTINCT lookups."""
         expected = {"sha256": self.valid_sha256, "sha1": self.valid_sha1, "md5": self.valid_md5}
