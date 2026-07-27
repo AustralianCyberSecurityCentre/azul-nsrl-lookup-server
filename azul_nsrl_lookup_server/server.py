@@ -20,13 +20,13 @@ from . import __version__, crud, models, schema, settings
 from .database import setup_engine
 
 # don't try to load on import so we can effectively relfectively load
-global SessionLocal
+global SessionLocal  # ty: ignore[unresolved-global]
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Function to run at startup of the fastapi server to create the database."""
-    global SessionLocal
+    global SessionLocal  # ty: ignore[unresolved-global]
     engine, SessionLocal = setup_engine()
 
     # reflect tables lazily on startup
@@ -194,7 +194,9 @@ async def custom_swagger_ui_html(request: Request) -> HTMLResponse:
     )
 
 
-@app.get(app.swagger_ui_oauth2_redirect_url, include_in_schema=False)
-async def swagger_ui_redirect():
-    """Enable offline swagger redirect."""
-    return get_swagger_ui_oauth2_redirect_html()
+if app.swagger_ui_oauth2_redirect_url:
+
+    @app.get(app.swagger_ui_oauth2_redirect_url, include_in_schema=False)
+    async def swagger_ui_redirect():
+        """Enable offline swagger redirect."""
+        return get_swagger_ui_oauth2_redirect_html()

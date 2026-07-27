@@ -80,7 +80,8 @@ class Version(Reflected, Base):
 
     version = Column(String, unique=True, primary_key=True)
     build_set = Column(String, nullable=False)
-    build_date = Column(TIMESTAMP, default=datetime.datetime.utcnow, nullable=False)
+    # FUTURE: move from datetime.datetime.utcnow to datetime.datetime.now(tz=datetime.UTC)
+    build_date = Column(TIMESTAMP, default=datetime.datetime.utcnow, nullable=False)  # ty: ignore[deprecated]
     release_date = Column(TIMESTAMP, nullable=False)
     description = Column(String, nullable=False)
 
