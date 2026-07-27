@@ -43,7 +43,7 @@ def get_details(db: Session, digest: str) -> list[schema.FileDetails]:
     # debug output for ORM query to SQL:
     # print(str(query.statement.compile()))
 
-    def build_package_dict(obj: object) -> dict[str, dict]:
+    def build_package_dict(obj: models.File) -> dict[str, dict] | None:
         result = {}
         if obj.package:
             result = {
@@ -76,7 +76,7 @@ def get_details(db: Session, digest: str) -> list[schema.FileDetails]:
 
     result = [
         schema.FileDetails(
-            **{
+            **{  # ty: ignore[invalid-argument-type] ty doesn't seem to understand the dict unpacking
                 "sha256": r.sha256,
                 "sha1": r.sha1,
                 "md5": r.md5,

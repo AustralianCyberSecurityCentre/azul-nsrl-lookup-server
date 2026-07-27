@@ -103,9 +103,9 @@ class FileDetails(File):
 class SummaryPackageVersions(BaseModel):
     """A temporary structure to hold package versions."""
 
-    name: str = ""
-    app_type: str = ""
-    versions: set[str] = set
+    name: str
+    app_type: str
+    versions: set[str]
 
 
 class FlatDetails(File):

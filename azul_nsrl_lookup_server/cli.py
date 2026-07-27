@@ -19,7 +19,7 @@ def server(
     forwarded_allow_ips: str = settings.server.forwarded_allow_ips,
 ):
     """Run the server."""
-    headers: list[str, str] = []
+    headers: list[tuple[str, str]] = []
     for header_label, header_val in settings.server.headers.items():
         headers.append((header_label.strip(), header_val.strip()))
 
