@@ -89,7 +89,7 @@ class TestServer(unittest.TestCase):
 
     def test_post_based_search(self):
         """Invalid digest given."""
-        response = self.client.post("/", data={"digest": self.valid_sha256, "detailed": False})  # ty: ignore[invalid-argument-type]
+        response = self.client.post("/", data={"digest": self.valid_sha256, "detailed": False})
         self.assertEqual(response.status_code, 200, response.text)
 
     def test_valid_distinct(self):
